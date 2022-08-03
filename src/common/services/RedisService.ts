@@ -1,0 +1,1 @@
+export { memoryStore as redisService } from '@providers/memory-store/memory-store.provider';

@@ -1,0 +1,42 @@
+services:
+  bec-dev-db:
+    image: mysql
+    container_name: bec-dev-db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_DATABASE=shamil-basic-e-commerce
+    ports:
+      - '3307:3306'
+    volumes: 
+      - db:/var/lib/mysql
+
+  bec-test-db:
+    image: mysql
+    container_name: bec-test-db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_DATABASE=basic-e-commerce
+    ports:
+      - '3308:3306'
+
+  bec-redis-service:
+    container_name: bec-redis-service
+    image: redis
+    environment:
+      - REDIS_PASSWORD=password
+    ports:
+      - '6380:6379'
+
+  bec-test-redis-service:
+    container_name: bec-test-redis-service
+    image: redis
+    environment:
+      - REDIS_PASSWORD=password
+    ports:
+      - '6381:6379'
+      
+volumes:
+  db:
+    driver: local
