@@ -6,7 +6,7 @@ export const enum Op  {
     gt = '>',
     lt = '<',
     eq = '=',
-    gte = '=>',
+    gte = '>=',
     lte = '<=',
     in = 'in',
     not = 'not',
