@@ -248,7 +248,7 @@ body
   "weight_unit": "kg",
   "isPublished": false,
   "description": "Delicious Beef Bone",
-  "type": "Meat,
+  "type": "Meat",
   "category_id": 1,
   "rating": 4
 }
@@ -366,7 +366,7 @@ Cart will be converted to order and cart items to order items. If any products h
 
 endpoint
 ```
-POST /api/v1/carts/:is/order
+POST /api/v1/carts/:id/order
 ```
 headers
 ```
